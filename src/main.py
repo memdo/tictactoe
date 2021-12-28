@@ -18,9 +18,11 @@ def render(board):
     print("  ------")
 
 def get_move():
+    print("X: ", end="")
     x = int(input())
+    print("Y: ", end="")
     y = int(input())
-    return (x, y)
+    return (y, x)
 
 def make_move(board, coords, side):
     board[coords[0]][coords[1]] = side
