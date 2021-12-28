@@ -25,6 +25,9 @@ def get_move():
     return (y, x)
 
 def make_move(board, coords, side):
-    board[coords[0]][coords[1]] = side
+    if board[coords[0]][coords[1]] == None:
+        board[coords[0]][coords[1]] = side
+    else:
+        print("This square is not empty, try again.")
     return board
 
