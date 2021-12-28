@@ -17,3 +17,8 @@ def render(board):
         print(f"{i}|{get_char(board[i][0])} {get_char(board[i][1])} {get_char(board[i][2])}|")
     print("  ------")
 
+def get_move():
+    x = int(input())
+    y = int(input())
+    return (x, y)
+
