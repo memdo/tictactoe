@@ -27,9 +27,10 @@ def get_move():
 def make_move(board, coords, side):
     if board[coords[0]][coords[1]] == None:
         board[coords[0]][coords[1]] = side
+        return True
     else:
         print("This square is not empty, try again.")
-    return board
+    return False
 
 board = new_board()
 side = "X"
@@ -37,7 +38,7 @@ side = "X"
 while True:
     render(board)
     print(f"{side}'s Turn")
-    make_move(board, get_move(), side)
-    side = "O" if side == "X" else "X"
+    if make_move(board, get_move(), side):
+        side = "O" if side == "X" else "X"
     print("----------------------------")
 
