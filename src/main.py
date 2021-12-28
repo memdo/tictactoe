@@ -34,11 +34,15 @@ def make_move(board, coords, side):
 
 board = new_board()
 side = "X"
+move_count = 0
 
-while True:
+while move_count < 9:
     render(board)
     print(f"{side}'s Turn")
     if make_move(board, get_move(), side):
         side = "O" if side == "X" else "X"
+        move_count += 1
     print("----------------------------")
 
+render(board)
+print("----------------------------")
