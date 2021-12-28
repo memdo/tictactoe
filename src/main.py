@@ -31,3 +31,13 @@ def make_move(board, coords, side):
         print("This square is not empty, try again.")
     return board
 
+board = new_board()
+side = "X"
+
+while True:
+    render(board)
+    print(f"{side}'s Turn")
+    make_move(board, get_move(), side)
+    side = "O" if side == "X" else "X"
+    print("----------------------------")
+
