@@ -22,3 +22,7 @@ def get_move():
     y = int(input())
     return (x, y)
 
+def make_move(board, coords, side):
+    board[coords[0]][coords[1]] = side
+    return board
+
